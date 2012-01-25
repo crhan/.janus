@@ -1,0 +1,12 @@
+[submodule "tcomment"]
+	path = tcomment
+	url = git://github.com/tomtom/tcomment_vim.git
+[submodule "zencoding-vim"]
+	path = zencoding-vim
+	url = git://github.com/mattn/zencoding-vim.git
+[submodule "autoclose"]
+	path = autoclose
+	url = git://github.com/Townk/vim-autoclose.git
+[submodule "lustyJuggler"]
+	path = lustyJuggler
+	url = git://github.com/vim-scripts/LustyJuggler.git
