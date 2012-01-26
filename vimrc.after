@@ -1,23 +1,5 @@
-set hidden
-set nocompatible
-
 " sets leader to ','
 let mapleader=","
-
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-"call pathogen#helptags()
-"call pathogen#runtime_append_all_bundles()
-
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" Source the vimrc file after saving it
-"if has("autocmd")
-"  autocmd bufwritepost .vimrc source $MYVIMRC
-"  autocmd bufwritepost .vimrc.pre source $MYVIMRC
-"endif
 
 " Most basic settings
 set wrap          " wrap lines
@@ -58,23 +40,6 @@ set nobackup
 filetype plugin indent on
 "autocmd filetype python set expandtab
 
-" Set term to support 256 color to enable the colorscheme mustang
-" set t_Co=256
-
-if &t_Co >= 256 || has("gui_running")
-	colorscheme aqua
-endif
-
-if &t_Co > 2 || has("gui_running")
-	" switch syntax highlighting on, when the terminal has colors
-	syntax on
-endif
-
-" Automatically highlight whitespaces
-" set list
-" set listchars=tab:>.,trail:.,extends:#,nbsp:.
-" autocmd filetype html,xml set listchars+=tab:\ \ 
-
 " Add a shortcut Mappings for ":" and make j k more like the normal one
 nnoremap ; :
 "nnoremap j gj
@@ -103,42 +68,14 @@ imap <C-j> <down>
 imap <C-k> <up>
 imap <C-l> <right>
 
-" Add keybind for yankring.vim
-nnoremap <silent> <F8> :YRShow<CR>
-
 " Bind lusty-juggler to <leader>b
 nmap <silent> <Leader>b :LustyJuggler<CR>
 
 " Bind paste mode toggle to <Leader>p
 set pastetoggle=<leader>p
 
-" set vimpress
-" let VIMPRESS = [{'username':'crhan',
-"                 \'blog_url':'http://b.crhan.com/'
-"                 \}]
-
-" Markdown to HTML
-nmap <leader>md :%!/usr/bin/Markdown.pl <cr>
-
 " NERDTree key binding
 nmap <leader>nt :NERDTree<cr>
-
-let g:input_toggle = 1
-function! Fcitx2en()
-   let s:input_status = system("fcitx-remote")
-   if s:input_status == 2
-      let g:input_toggle = 1
-      let l:a = system("fcitx-remote -c")
-   endif
-endfunction
-
-function! Fcitx2zh()
-   let s:input_status = system("fcitx-remote")
-   if s:input_status != 2 && g:input_toggle == 1
-      let l:a = system("fcitx-remote -o")
-      let g:input_toggle = 0
-   endif
-endfunction
 
 " 快捷键间隔时间
 " set timeoutlen=150
@@ -171,4 +108,4 @@ let g:user_zen_settings = {
       \},
       \}
 let g:user_zen_leader_key = '<c-e>'
-nnoremap <silent> <Leader>t :CommandT<CR>
+" nnoremap <silent> <Leader>t :CommandT<CR>
