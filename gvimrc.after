@@ -1,0 +1,3 @@
+set transparency=10
+" start gvim without right and Left scrollbar
+set go-=rL
