@@ -1,1 +1,1 @@
-" call janus#disable_plugin()
+call janus#disable_plugin("endwise")

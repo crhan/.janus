@@ -54,9 +54,6 @@ map <C-l> <C-w>l
 " Easy to clear the hightlighting for search
 nmap <silent> <leader>/ :nohlsearch<CR>
 
-" Toggle the Tlist
-nmap <silent> <leader>ll :TlistToggle<CR>
-
 " Fold the select visual box
 vmap <silent> <leader>fo :fo<cr>
 
@@ -70,9 +67,6 @@ imap <C-l> <right>
 
 " Bind lusty-juggler to <leader>b
 nmap <silent> <Leader>b :LustyJuggler<CR>
-
-" Bind paste mode toggle to <Leader>p
-set pastetoggle=<leader>p
 
 " NERDTree key binding
 nmap <leader>nt :NERDTree<cr>
@@ -109,3 +103,18 @@ let g:user_zen_settings = {
       \}
 let g:user_zen_leader_key = '<c-e>'
 " nnoremap <silent> <Leader>t :CommandT<CR>
+" Bind paste mode toggle to <Leader>p
+set pastetoggle=<leader>p
+nmap <Leader>P :Preview<CR>
+
+" CtrlP config
+map <leader>t :CtrlP<cr>
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$',
+    \ 'link': 'some$\|bad$\|symbolic$\|links$',
+    \ }
+let g:ctrlp_max_depth = 4
+" let g:ctrlp_user_command = [repo_marker, vcs_ls_command, fallback_command]
+let g:ctrlp_user_command = ['.hg/', 'hg --cwd %s locate -I .']
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']

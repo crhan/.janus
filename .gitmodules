@@ -10,3 +10,12 @@
 [submodule "lustyJuggler"]
 	path = lustyJuggler
 	url = git://github.com/vim-scripts/LustyJuggler.git
+[submodule "coffeScript-VIM-Snippets"]
+	path = coffeScript-VIM-Snippets
+	url = git://github.com/carlosvillu/coffeScript-VIM-Snippets.git
+[submodule "html5.vim"]
+	path = html5.vim
+	url = git://github.com/othree/html5.vim.git
+[submodule "vim-preview"]
+	path = vim-preview
+	url = git://github.com/greyblake/vim-preview.git
