@@ -1,4 +1,5 @@
 set transparency=5
 " start gvim without right and Left scrollbar
 set go=egma
-color darkZ
+" 根据现在时刻显示颜色
+silent SetColors now
