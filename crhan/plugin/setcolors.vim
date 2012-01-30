@@ -101,7 +101,7 @@ nnoremap <A-F8> :call NextColor(0)<CR>
 " Set color scheme according to current time of day.
 function! s:HourColor()
   let hr = str2nr(strftime('%H'))
-  let i = len(hr)
+  let i = hr % len(s:mycolors)
   execute 'colorscheme '.s:mycolors[i]
   redraw
   echo g:colors_name
