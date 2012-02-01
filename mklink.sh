@@ -5,3 +5,5 @@ for i in vimrc* gvimrc*
 do
   ln -sf $CWD/$i ~/.$i
 done
+git submodule init
+git submodule update
