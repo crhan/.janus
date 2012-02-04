@@ -1,6 +1,3 @@
-" sets leader to ','
-let mapleader=","
-
 " Most basic settings
 set wrap          " wrap lines
 set tabstop=2     " a tab is four spaces
@@ -23,7 +20,7 @@ set incsearch     " show search matches as you type
 set updatecount=100 " every 100 chars will vim save them to swap
 set cursorline    " Highlight the cursor line
 set list
-set lcs=extends:>,precedes:<,tab:>-,trail:·
+"set lcs=extends:>,precedes:<,tab:>-,trail:·
 
 " Set vim to have a large undo buffer
 set history=1000         " remember more commands and search history
@@ -57,7 +54,8 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 " Fold the select visual box
 vmap <silent> <leader>fo :fo<cr>
 
-cmap w!! w !sudo tee % >/dev/null
+" mapped in janus distribution
+"cmap w!! w !sudo tee % >/dev/null
 
 " Move cursor when inserting
 imap <C-h> <left>
@@ -106,7 +104,7 @@ nmap <Leader>P :Preview<CR>
 
 " CtrlP config
 " Bind CtrlPBuffer to <leader>b
-nmap <silent> <Leader>b :CtrlPBuffer<CR>
+"nmap <silent> <Leader>b :CtrlPBuffer<CR>
 
 map <leader>t :CtrlP<cr>
 let g:ctrlp_custom_ignore = {
@@ -119,7 +117,6 @@ let g:ctrlp_max_depth = 4
 let g:ctrlp_user_command = ['.hg/', 'hg --cwd %s locate -I .']
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
-color slate
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
@@ -131,3 +128,6 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+" color for vim with noGUI
+color slate
