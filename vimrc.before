@@ -1,4 +1,4 @@
-call janus#disable_plugin("endwise")
+"call janus#disable_plugin("endwise")
 
 " sets leader to ','
 let mapleader=","
