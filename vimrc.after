@@ -104,7 +104,7 @@ nmap <Leader>P :Preview<CR>
 
 " CtrlP config
 " Bind CtrlPBuffer to <leader>b
-"nmap <silent> <Leader>b :CtrlPBuffer<CR>
+nmap <silent> <Leader>b :CtrlPBuffer<CR>
 
 map <leader>t :CtrlP<cr>
 let g:ctrlp_custom_ignore = {
@@ -112,10 +112,11 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.exe$\|\.so$\|\.dll$',
     \ 'link': 'some$\|bad$\|symbolic$\|links$',
     \ }
-let g:ctrlp_max_depth = 4
+let g:ctrlp_dotfiles = 1
+let g:ctrlp_max_depth = 10
 " let g:ctrlp_user_command = [repo_marker, vcs_ls_command, fallback_command]
 " let g:ctrlp_user_command = ['.hg/', 'hg --cwd %s locate -I .']
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+" let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
