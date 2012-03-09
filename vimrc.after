@@ -115,7 +115,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_max_depth = 4
 " let g:ctrlp_user_command = [repo_marker, vcs_ls_command, fallback_command]
 " let g:ctrlp_user_command = ['.hg/', 'hg --cwd %s locate -I .']
-" let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -131,3 +131,9 @@ vnoremap <silent> # :<C-U>
 
 " color for vim with noGUI
 color default
+set modeline
+
+" Perfer LaTeX
+let g:tex_flavor = "latex"
+let g:plaintex_delimiters = 1
+let g:tex_fold_enabled=1

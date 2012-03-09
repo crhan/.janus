@@ -16,3 +16,6 @@
 [submodule "vim-preview"]
 	path = vim-preview
 	url = git://github.com/greyblake/vim-preview.git
+[submodule "vim-liquid"]
+	path = vim-liquid
+	url = https://github.com/tpope/vim-liquid.git
