@@ -1,4 +1,5 @@
 " Most basic settings
+set hidden
 set wrap          " wrap lines
 set tabstop=2     " a tab is four spaces
 set expandtab     " expand tab to spaces
@@ -64,7 +65,7 @@ imap <C-k> <up>
 imap <C-l> <right>
 
 " NERDTree key binding
-nmap <leader>nt :NERDTree<cr>
+nmap <leader>nt :NERDTreeToggle<cr>
 
 " 快捷键间隔时间
 " set timeoutlen=150
@@ -97,23 +98,26 @@ let g:user_zen_settings = {
       \},
       \}
 let g:user_zen_leader_key = '<c-e>'
-" nnoremap <silent> <Leader>t :CommandT<CR>
 " Bind paste mode toggle to <Leader>p
 set pastetoggle=<leader>p
 nmap <Leader>P :Preview<CR>
 
 " CtrlP config
 " Bind CtrlPBuffer to <leader>b
-nmap <silent> <Leader>b :CtrlPBuffer<CR>
+" nmap <silent> <Leader>b :CtrlPBuffer<CR>
 
-map <leader>t :CtrlP<cr>
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|_site$',
     \ 'file': '\.exe$\|\.so$\|\.dll$',
     \ 'link': 'some$\|bad$\|symbolic$\|links$',
     \ }
 let g:ctrlp_dotfiles = 1
 let g:ctrlp_max_depth = 10
+let g:ctrlp_extensions = ['changes', 'line', 'buffertag']
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_open_multiple_files = '2vr'
+
+
 " let g:ctrlp_user_command = [repo_marker, vcs_ls_command, fallback_command]
 " let g:ctrlp_user_command = ['.hg/', 'hg --cwd %s locate -I .']
 " let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
@@ -137,4 +141,20 @@ set modeline
 " Perfer LaTeX
 let g:tex_flavor = "latex"
 let g:plaintex_delimiters = 1
-let g:tex_fold_enabled=1
+" let g:tex_fold_enabled=1
+
+" remove space at each line when saving
+" autocmd BufWritePre * :%s/\s\+$//e
+
+" VIM 7.3+ has support for highlighting a specified column.
+" if exists('+colorcolumn')
+"     set colorcolumn=80
+" else
+"     " Emulate
+"     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
+" endif
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
+
+"Ctags 索引配置
+set tags+=/Users/crhan/.rvm/gems/ruby-1.9.3-p125/tags
+nmap <leader>rr :!ctags --extra=+f --exclude=.git --exclude=log -R *

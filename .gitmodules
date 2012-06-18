@@ -19,3 +19,6 @@
 [submodule "vim-liquid"]
 	path = vim-liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "vim-less"]
+	path = vim-less
+	url = https://github.com/groenewege/vim-less
