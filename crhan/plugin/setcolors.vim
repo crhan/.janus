@@ -16,7 +16,7 @@ if v:version < 700 || exists('loaded_setcolors') || &cp
 endif
 
 let loaded_setcolors = 1
-let s:mycolors = ['vividchalk', 'molokai', 'tango', 'desertEx', 'jellybeans+', 'railscasts', 'getafe']  " colorscheme names that we use to set color
+let s:mycolors = ['molokai', 'tango', 'desertEx', 'jellybeans+', 'railscasts', 'getafe']  " colorscheme names that we use to set color
 
 " Set list of color scheme names that we will use, except
 " argument 'now' actually changes the current color scheme.
