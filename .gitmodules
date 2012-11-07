@@ -22,3 +22,6 @@
 [submodule "vim-less"]
 	path = vim-less
 	url = https://github.com/groenewege/vim-less
+[submodule "vim-slim"]
+	path = vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
