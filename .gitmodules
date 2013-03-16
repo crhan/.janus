@@ -30,4 +30,4 @@
 	url = https://github.com/Lokaltog/vim-powerline
 [submodule "tabular"]
 	path = tabular
-	url = //github.com/godlygeek/tabular
+	url = https://github.com/godlygeek/tabular
