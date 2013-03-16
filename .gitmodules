@@ -24,4 +24,10 @@
 	url = https://github.com/groenewege/vim-less
 [submodule "vim-slim"]
 	path = vim-slim
-	url = git://github.com/bbommarito/vim-slim.git
+	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim-powerline"]
+	path = vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline
+[submodule "tabular"]
+	path = tabular
+	url = //github.com/godlygeek/tabular
