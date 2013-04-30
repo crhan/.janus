@@ -2,3 +2,4 @@
 
 " sets leader to ','
 let mapleader=","
+call janus#disable_plugin('vimwiki', "I don't like it")
