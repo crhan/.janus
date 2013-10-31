@@ -43,3 +43,6 @@
 [submodule "dbext.vim"]
 	path = dbext.vim
 	url = https://github.com/vim-scripts/dbext.vim.git
+[submodule "vim-abolish"]
+	path = vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
