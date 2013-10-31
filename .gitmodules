@@ -34,3 +34,6 @@
 [submodule "TailMinusF"]
 	path = TailMinusF
 	url = https://github.com/vim-scripts/TailMinusF.git
+[submodule "dbext.vim"]
+	path = dbext.vim
+	url = https://github.com/vim-scripts/dbext.vim.git
