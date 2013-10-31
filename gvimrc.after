@@ -4,3 +4,4 @@ set go=egma
 " 根据现在时刻显示颜色
 " silent SetColors now
 color desertEx
+set guifont=Menlo\ for\ Powerline:h12
