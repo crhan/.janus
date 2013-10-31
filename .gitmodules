@@ -31,3 +31,6 @@
 [submodule "tabular"]
 	path = tabular
 	url = https://github.com/godlygeek/tabular
+[submodule "TailMinusF"]
+	path = TailMinusF
+	url = https://github.com/vim-scripts/TailMinusF.git
