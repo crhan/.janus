@@ -22,6 +22,7 @@ set updatecount=100 " every 100 chars will vim save them to swap
 set cursorline    " Highlight the cursor line
 set list
 set lcs=extends:>,precedes:<,tab:>-,trail:·
+set scrolloff=5   " scrolloff to 5
 
 " Set vim to have a large undo buffer
 set history=1000         " remember more commands and search history
@@ -42,6 +43,8 @@ filetype plugin indent on
 nnoremap ; :
 "nnoremap j gj
 "nnoremap k gk
+
+unmap <leader>tw
 
 " Easy window navigation
 map <C-h> <C-w>h
