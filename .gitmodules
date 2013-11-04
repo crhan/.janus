@@ -31,3 +31,9 @@
 [submodule "tabular"]
 	path = tabular
 	url = https://github.com/godlygeek/tabular
+[submodule "funcoo.vim"]
+	path = funcoo.vim
+	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule "dash.vim"]
+	path = dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
