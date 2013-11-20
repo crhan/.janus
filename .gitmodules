@@ -46,3 +46,6 @@
 [submodule "vim-abolish"]
 	path = vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "emmet-vim"]
+	path = emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
