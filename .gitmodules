@@ -49,3 +49,6 @@
 [submodule "emmet-vim"]
 	path = emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "tomdoc.vim"]
+	path = tomdoc.vim
+	url = https://github.com/duwanis/tomdoc.vim.git
