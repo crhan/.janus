@@ -52,3 +52,6 @@
 [submodule "tomdoc.vim"]
 	path = tomdoc.vim
 	url = https://github.com/duwanis/tomdoc.vim.git
+[submodule "rspec-vim-folding"]
+	path = rspec-vim-folding
+	url = https://github.com/bcaccinolo/rspec-vim-folding.git
