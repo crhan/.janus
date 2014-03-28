@@ -111,7 +111,7 @@ nmap <Leader>P :Preview<CR>
 
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|_site$\|doc$\|coverage$',
-    \ 'file': '\.exe$\|\.so$\|\.dll$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.png$',
     \ 'link': 'some$\|bad$\|symbolic$\|links$',
     \ }
 let g:ctrlp_dotfiles = 1
@@ -175,3 +175,7 @@ if exists(":Tabularize")
 endif
 
 map <D-r> :Rake<CR>
+
+if has("autocmd")
+  autocmd BufNewFile *.spec 0r $HOME/.janus/crhan/templates/template.spec
+endif
