@@ -55,3 +55,12 @@
 [submodule "rspec-vim-folding"]
 	path = rspec-vim-folding
 	url = https://github.com/bcaccinolo/rspec-vim-folding.git
+[submodule "vim-node"]
+	path = vim-node
+	url = https://github.com/moll/vim-node
+[submodule "auto-pairs"]
+	path = auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "berkshelf.vim"]
+	path = berkshelf.vim
+	url = https://github.com/alpaca-tc/berkshelf.vim.git
