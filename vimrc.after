@@ -179,3 +179,8 @@ map <D-r> :Rake<CR>
 if has("autocmd")
   autocmd BufNewFile *.spec 0r $HOME/.janus/crhan/templates/template.spec
 endif
+
+"" AutoPairs config
+let g:AutoPairsMapBS = 0
+let g:AutoPairsMapSpace = 0
+execute 'inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>'

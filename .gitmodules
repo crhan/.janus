@@ -64,3 +64,9 @@
 [submodule "berkshelf.vim"]
 	path = berkshelf.vim
 	url = https://github.com/alpaca-tc/berkshelf.vim.git
+[submodule "vim-bundler"]
+	path = vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "vim-projectionist"]
+	path = vim-projectionist
+	url = https://github.com/tpope/vim-projectionist.git
