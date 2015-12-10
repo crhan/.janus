@@ -181,6 +181,11 @@ if has("autocmd")
 endif
 
 "" AutoPairs config
-let g:AutoPairsMapBS = 0
+let g:AutoPairsMapBS = 1
 let g:AutoPairsMapSpace = 0
-execute 'inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>'
+
+"" Syntastic
+let g:syntastic_mode_map = { 'passive_filetypes': ["sass", "scss"] }
+
+"" Dash
+:nmap <silent> <leader>d <Plug>DashSearch
