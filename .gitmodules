@@ -70,3 +70,9 @@
 [submodule "vim-projectionist"]
 	path = vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
+[submodule "DrawIt"]
+	path = DrawIt
+	url = https://github.com/vim-scripts/DrawIt.git
+[submodule "Dockerfile.vim"]
+	path = Dockerfile.vim
+	url = git@github.com:ekalinin/Dockerfile.vim.git
