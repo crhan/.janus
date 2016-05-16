@@ -76,3 +76,15 @@
 [submodule "Dockerfile.vim"]
 	path = Dockerfile.vim
 	url = git@github.com:ekalinin/Dockerfile.vim.git
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "YouCompleteMe"]
+	path = YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "ultisnips"]
+	path = ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim-indent-guides"]
+	path = vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git

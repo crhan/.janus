@@ -123,7 +123,7 @@ let g:ctrlp_open_multiple_files = '2vr'
 
 " let g:ctrlp_user_command = [repo_marker, vcs_ls_command, fallback_command]
 " let g:ctrlp_user_command = ['.hg/', 'hg --cwd %s locate -I .']
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+" let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
@@ -150,12 +150,12 @@ let g:plaintex_delimiters = 1
 " autocmd BufWritePre * :%s/\s\+$//e
 
 " VIM 7.3+ has support for highlighting a specified column.
-" if exists('+colorcolumn')
-"     set colorcolumn=80
-" else
-"     " Emulate
-"     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
-" endif
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    " Emulate
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
+endif
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
 "Ctags 索引配置
@@ -174,14 +174,13 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
-map <D-r> :Rake<CR>
-
 if has("autocmd")
   autocmd BufNewFile *.spec 0r $HOME/.janus/crhan/templates/template.spec
 endif
 
 "" AutoPairs config
-let g:AutoPairsMapBS = 1
+let g:AutoPairsMapBS = 0
+inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>
 let g:AutoPairsMapSpace = 0
 
 "" Syntastic
@@ -189,3 +188,14 @@ let g:syntastic_mode_map = { 'passive_filetypes': ["sass", "scss"] }
 
 "" Dash
 :nmap <silent> <leader>d <Plug>DashSearch
+
+"" YouCompleteMe
+let g:ycm_key_list_select_completion = ['<Down>']
+
+"" UltiSnips
+let g:UltiSnipsEditSplit = 'vertical'
+let g:UltisnipsSnippetsDir = '~/.janus/crhan/UltiSnips'
+let g:UltiSnipsEnableSnipMate = 0
+
+" indent-guide
+let g:indent_guides_enable_on_vim_startup = 1

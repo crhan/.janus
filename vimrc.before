@@ -4,3 +4,4 @@
 let mapleader=","
 call janus#disable_plugin('vimwiki', "I don't like it")
 call janus#disable_plugin('buffergator', "What is this?")
+call janus#disable_plugin('snipmate', "What is this?")
