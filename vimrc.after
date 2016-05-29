@@ -110,7 +110,7 @@ nmap <Leader>P :Preview<CR>
 " nmap <silent> <Leader>b :CtrlPBuffer<CR>
 
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|_site$\|doc$\|coverage$',
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|_site$\|doc$\|coverage$\|htmlcov$\|_book$\|.tox$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.png$',
     \ 'link': 'some$\|bad$\|symbolic$\|links$',
     \ }
@@ -139,6 +139,7 @@ vnoremap <silent> # :<C-U>
 
 " color for vim with noGUI
 color default
+set background=dark
 set modeline
 
 " Perfer LaTeX
@@ -179,8 +180,8 @@ if has("autocmd")
 endif
 
 "" AutoPairs config
-let g:AutoPairsMapBS = 0
-inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>
+let g:AutoPairsMapBS = 1
+" inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>
 let g:AutoPairsMapSpace = 0
 
 "" Syntastic
@@ -191,6 +192,8 @@ let g:syntastic_mode_map = { 'passive_filetypes': ["sass", "scss"] }
 
 "" YouCompleteMe
 let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_complete_in_comments = 1
+nmap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
 
 "" UltiSnips
 let g:UltiSnipsEditSplit = 'vertical'
@@ -199,3 +202,8 @@ let g:UltiSnipsEnableSnipMate = 0
 
 " indent-guide
 let g:indent_guides_enable_on_vim_startup = 1
+
+" SIMPYLFOLD
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+let g:SimpylFold_docstring_preview = 1

@@ -1,7 +1,7 @@
-set transparency=10
+set transparency=5
 " start gvim without right and Left scrollbar
 set go=egma
 " 根据现在时刻显示颜色
 " silent SetColors now
-color desertEx
+color molokai
 set guifont=Menlo\ for\ Powerline:h12
