@@ -119,6 +119,8 @@ let g:ctrlp_max_depth = 10
 let g:ctrlp_extensions = ['changes', 'line', 'buffertag']
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_open_multiple_files = '2vr'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_working_path_mode = 'a'
 
 
 " let g:ctrlp_user_command = [repo_marker, vcs_ls_command, fallback_command]
@@ -186,6 +188,19 @@ let g:AutoPairsMapSpace = 0
 
 "" Syntastic
 let g:syntastic_mode_map = { 'passive_filetypes': ["sass", "scss"] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+"" PyMode
+let g:pymode_lint = 0
+let g:pymode_lint_on_write = 0
 
 "" Dash
 :nmap <silent> <leader>d <Plug>DashSearch

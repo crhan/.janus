@@ -94,3 +94,9 @@
 [submodule "SimpylFold"]
 	path = SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "vim-multiple-cursors"]
+	path = vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "python-mode"]
+	path = python-mode
+	url = https://github.com/klen/python-mode.git
